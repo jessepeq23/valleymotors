@@ -72,8 +72,8 @@
      font-size: 0.9rem;
      display: inline-block;
      margin-bottom: 0.5rem;
-     background: #65fe08;
-     color: #fff;
+     color: #65fe08;
+     background: #130f40;
      padding: 0 0.3rem;
      transition: all 0.5s ease;
  }
@@ -100,7 +100,7 @@
      text-decoration: line-through;
  }
  .new-price span{
-     color: #65fe08;
+     color: #130f40;
  }
  .product-detail h2{
      text-transform: capitalize;

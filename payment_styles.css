@@ -1,3 +1,8 @@
+
+:root{
+--dark-green: #0ae243;
+}
+
 body{
   margin: 0px;
 }
@@ -77,7 +82,7 @@ body{
 }
 
 .loan-calculator .calculate-btn {
-  background: #65fe08;
+  background: var(--dark-green);
   color: #fff;
   border: none;
   padding: 8px 32px;

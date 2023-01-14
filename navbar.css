@@ -3,6 +3,7 @@
 :root{
     --yellow:#f9d806;
     --green: #65fe08;
+    --dark-green: #0ae243;
     --grey: grey; 
     --light-yellow:#ffee80;
     --black:#130f40;
@@ -50,7 +51,7 @@ section{
     bottom:1rem; left:0;
     height: 100%;
     width: 100%;
-    background: var(--green);
+    background: var(--dark-green);
     z-index: -1;
     clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
 }
@@ -59,7 +60,7 @@ section{
     display: inline-block;
     margin-top: 1rem;
     padding:.8rem 3rem;
-    background:var(--green);
+    background:var(--dark-green);
     color:var(--black);
     cursor: pointer;
     font-size: 1.7rem;
@@ -69,7 +70,7 @@ section{
 }
 
 .btn:hover{
-    background:var(--grey);
+    background:var(--green);
 }
 
 .header{
@@ -90,7 +91,12 @@ section{
 }
 
 .header .logo span{
-    color:var(--green);
+    color:var(--dark-green);
+    text-shadow:
+        -1px -1px 0 var(--black),
+        1px -1px 0 var(--black),
+        -1px 1px 0 var(--black),
+        1px 1px 0 var(--black);  
 }
 
 .header .navbar a{

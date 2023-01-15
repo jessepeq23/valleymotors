@@ -1,8 +1,6 @@
-style.css
-
-Details
-
-Activity
+:root{
+    --dark-green: #0ae243;
+}
 
 * {
     margin: 0;
@@ -64,14 +62,17 @@ body {
 .glass h2 {
     font-size: 1.5rem;
     margin-top: 40px;
+    text-align: center;
 }
 .input {
     width: 100%;
     height: 70px;
     overflow: hidden;
     margin-top: 40px;
+    text-align: center;
 }
 .input input {
+    color: var(--dark-green);
     width: 100%;
     height: 70px;
     border: none;
@@ -80,8 +81,10 @@ body {
     outline: none;
     font-size: 1.5rem;
     border-radius: 20px;
+    text-align: center;
 }
 .glass p {
     font-size: 1.5rem;
     margin-top: 30px;
+    text-align: center;
 }

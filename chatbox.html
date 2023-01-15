@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chatbot Javascript</title>
+        <link rel="stylesheet" href="chatbox.css" />
+        <link rel="stylesheet" href="navbar.css" />
+    </head>
+    <body>
+
+
+        <header class="header">
+
+            <div id="menu-btn" class="fas fa-bars"></div>
+        
+            <a href="index.html" class="logo" href="image/Asset_1.png"></a>
+            <a href="index.html"> <img src="image/Asset_1.png"> </a>
+            <a href="index.html" class="logo"> <span>Valley</span>Motors </a>
+        
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="index.html">popular</a>
+                <a href="index.html">vehicles</a>
+                <a href="index.html">services</a>
+                <a href="index.html">reviews</a>
+                <a href="index.html">contact</a>
+            </nav>
+        
+            <div id="login-btn">
+                <button class="btn">login</button>
+                <i class="far fa-user"></i>
+            </div>
+        
+        </header> 
+            
+        <div class="login-form-container">
+        
+            <span id="close-login-form" class="fas fa-times"></span>
+        
+            <form action="">
+                <h3>user login</h3>
+                <input type="email" placeholder="email" class="box">
+                <input type="password" placeholder="password" class="box">
+                <p> forget your password <a href="#">click here</a> </p>
+                <input type="submit" value="login" class="btn">
+                <p>or login with</p>
+                <div class="buttons">
+                    <a href="#" class="btn"> google </a>
+                    <a href="#" class="btn"> facebook </a>
+                </div>
+                <p> don't have an account <a href="#">create one</a> </p>
+            </form>
+        
+        </div>
+
+
+        <div class="glass">
+            <h1>Valley Motors Chat-Bot</h1>
+            <h2>Hello, What Can I Help You With Today?</h2>
+            <div class="input">
+                <input
+                    type="text"
+                    id="userBox"
+                    onkeydown="if(event.keyCode == 13){ talk()}"
+                    placeholder="Type your Question"
+                />
+            </div>
+            <p id="chatLog">Answer Appering Hear</p>
+        </div>
+        <script src="chatbox.js"></script>
+        <script src="navbar.js"></script>
+
+    </body>
+</html>

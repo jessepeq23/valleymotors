@@ -1,6 +1,12 @@
 
 function talk() {
     var know = {
+        "hello": "Hello!",
+        "hello": "Hello!",
+        "hi": "Hello!",
+        "Hi": "Hello!",
+
+
         "who are you": "Hello, I am  the chat-bot for Valley Motors.",
         "Who are you": "Hello, I am  the chat-bot for Valley Motors.",
         "who are you?": "Hello, I am  the chat-bot for Valley Motors.",
@@ -16,10 +22,10 @@ function talk() {
         "what is the phone number?": "Our phone number is (956) 701-5850.",
         "What is the phone number?": "Our phone number is (956) 701-5850.",
       
-        "where are you located": "Our address is 800 S Alamo Rd, Alamo, TX 78516.",
-        "where are you located?": "Our address is 800 S Alamo Rd, Alamo, TX 78516.",
-        "Where are you located": "Our address is 800 S Alamo Rd, Alamo, TX 78516.",
-        "Where are you located?": "Our address is 800 S Alamo Rd, Alamo, TX 78516.",
+        "where are you located": "We are located in 800 S Alamo Rd, Alamo, TX 78516.",
+        "where are you located?": "We are located in 800 S Alamo Rd, Alamo, TX 78516.",
+        "Where are you located": "We are located in 800 S Alamo Rd, Alamo, TX 78516.",
+        "Where are you located?": "We are located in 800 S Alamo Rd, Alamo, TX 78516.",
 
         "what time are you open": "We are open Monday-Friday with hours from 9am-5pm.",
         "what time are you open?": "We are open Monday-Friday with hours from 9am-5pm.",

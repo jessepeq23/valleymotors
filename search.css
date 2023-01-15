@@ -1,3 +1,8 @@
+:root{
+    --dark-green: #0ae243;
+    --black:#130f40;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,13 +10,16 @@
     border: none;
     outline: none;
     font-family: "Poppins", sans-serif;
-  }
+  } 
   body {
     background-color: #f5f8ff;
   }
   .wrapper {
     width: 95%;
-    margin: 0 auto;
+    margin-top: 125px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
   }
   #search-container {
     margin: 1em 0;
@@ -23,27 +31,27 @@
     padding: 1em 0.3em;
   }
   #search-container input:focus {
-    border-bottom-color: #6759ff;
+    border-bottom-color: var(--black);
   }
   #search-container button {
     padding: 1em 2em;
     margin-left: 1em;
-    background-color: #6759ff;
-    color: #ffffff;
+    background-color: var(--dark-green);
+    color: var(--black);
     border-radius: 5px;
     margin-top: 0.5em;
   }
   .button-value {
-    border: 2px solid #6759ff;
+    border: 2px solid var(--dark-green);
     padding: 1em 2.2em;
     border-radius: 3em;
     background-color: transparent;
-    color: #6759ff;
+    color: var(--black);
     cursor: pointer;
   }
   .active {
-    background-color: #6759ff;
-    color: #ffffff;
+    background-color: var(--dark-green);
+    color: var(--black);
   }
   #products {
     display: grid;

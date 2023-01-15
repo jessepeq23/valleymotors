@@ -2,43 +2,108 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Filter And Search</title>
+    <title>Vehicle Search</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="icon" type="image/x-icon" href="image/Asset_1.png"> 
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="search.css" />
+    <link rel="stylesheet" href="navbar.css">
   </head>
   <body>
+
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+    
+      <!----  <a href="index.html" class="logo" href="image/Asset_1.png"></a>
+        <a href="index.html"> <img src="image/Asset_1.png"> </a>  -->
+        <a href="index.html" class="logo"> <span>Valley</span>Motors </a>
+    
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html">popular</a>
+            <a href="index.html">vehicles</a>
+            <a href="index.html">services</a>
+            <a href="index.html">reviews</a>
+            <a href="index.html">contact</a>
+        </nav>
+    
+        <div id="login-btn">
+            <button class="btn">login</button>
+            <i class="far fa-user"></i>
+        </div>
+    
+    </header> 
+        
+    <div class="login-form-container">
+    
+        <span id="close-login-form" class="fas fa-times"></span>
+    
+        <form action="">
+            <h3>user login</h3>
+            <input type="email" placeholder="email" class="box">
+            <input type="password" placeholder="password" class="box">
+            <p> forget your password <a href="#">click here</a> </p>
+            <input type="submit" value="login" class="btn">
+            <p>or login with</p>
+            <div class="buttons">
+                <a href="#" class="btn"> google </a>
+                <a href="#" class="btn"> facebook </a>
+            </div>
+            <p> don't have an account <a href="#">create one</a> </p>
+        </form>
+    
+    </div>
+
+    
     <div class="wrapper">
       <div id="search-container">
         <input
           type="search"
           id="search-input"
-          placeholder="Search product name here.."
+          placeholder="Search"
         />
         <button id="search">Search</button>
       </div>
       <div id="buttons">
         <button class="button-value" onclick="filterProduct('all')">All</button>
-        <button class="button-value" onclick="filterProduct('Topwear')">
-          Topwear
+        <button class="button-value" onclick="filterProduct('Car')">
+          Car
         </button>
-        <button class="button-value" onclick="filterProduct('Bottomwear')">
-          Bottomwear
+        <button class="button-value" onclick="filterProduct('Truck')">
+          Truck
         </button>
-        <button class="button-value" onclick="filterProduct('Jacket')">
-          Jacket
+        <button class="button-value" onclick="filterProduct('SUV')">
+          SUV
         </button>
-        <button class="button-value" onclick="filterProduct('Watch')">
-          Watch
+        <button class="button-value" onclick="filterProduct('2022')">
+          2022
         </button>
+        <button class="button-value" onclick="filterProduct('2021')">
+        2021
+      </button>
+      <button class="button-value" onclick="filterProduct('2020')">
+        2020
+      </button>
+      <button class="button-value" onclick="filterProduct('Low')">
+        Price [low to high]
+      </button>
+      <button class="button-value" onclick="filterProduct('High')">
+        Price [high to low]
+      </button>
       </div>
       <div id="products"></div>
     </div>
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script src="navbar.js"></script>
   </body>
 </html>

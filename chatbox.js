@@ -1,10 +1,12 @@
 
 function talk() {
     var know = {
-        "hello": "Hello!",
+        "Hello": "Hello!",
         "hello": "Hello!",
         "hi": "Hello!",
         "Hi": "Hello!",
+        "Hey": "Hello!",
+        "hey": "Hello!",
 
 
         "who are you": "Hello, I am  the chat-bot for Valley Motors.",

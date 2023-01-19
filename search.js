@@ -1,169 +1,90 @@
-let products = {
-    data: [
+(function() {
+		
+  let field = document.querySelector('.items');
+  let li = Array.from(field.children);
+
+  function FilterProduct() {
+    for(let i of li){
+      const name = i.querySelector('strong');
+      const x = name.textContent;
+      i.setAttribute("data-category", x);
+    }
+
+    let indicator = document.querySelector('.indicator').children;
+
+    this.run = function() {
+      for(let i=0; i<indicator.length; i++)
       {
-        productName: "2022 Red Car",
-        category: "Car",
-        price: "62,000",
-        image: "car_1.jpeg",
-      },
-      {
-        productName: "2022 White Jeep",
-        category: "Jeep",
-        price: "62,000",
-        image: "car_.jpeg",
-      },
-      {
-        productName: "2021 Blue Car",
-        category: "Car",
-        price: "62,000",
-        image: "car_2.jpeg",
-      },
-      {
-        productName: "2021 Black Car",
-        category: "Car",
-        price: "62,000",
-        image: "car_9.jpeg",
-      },
-      {
-        productName: "2020 White Car",
-        category: "Car",
-        price: "62,000",
-        image: "car_5.jpeg",
-      },
-      {
-        productName: "2020 White Car",
-        category: "Car",
-        price: "62,000",
-        image: "car_6.jpeg",
-      },
-      {
-        productName: "2020 Black Car",
-        category: "Car",
-        price: "62,000",
-        image: "car_7.jpeg",
-      },
-      {
-        productName: "2022 White SUV",
-        category: "SUV",
-        price: "62,000",
-        image: "car_8.jpeg",
-      },
-      {
-        productName: "2022 Gray SUV",
-        category: "SUV",
-        price: "62,000",
-        image: "car_10.jpeg",
-      },
-      {
-        productName: "2022 White SUV",
-        category: "SUV",
-        price: "62,000",
-        image: "car_11.jpeg",
-      },
-      {
-        productName: "2021 Black SUV",
-        category: "SUV",
-        price: "62,000",
-        image: "car_4.jpeg",
-      },
-      {
-        productName: "2020 Gray SUV",
-        category: "SUV",
-        price: "62,000",
-        image: "car_3.jpeg",
-      },
-      {
-        productName: "2021 Black Truck",
-        category: "Truck",
-        price: "62,000",
-        image: "car_1333.jpeg",
-      },
-      {
-        productName: "2020 Gray Truck",
-        category: "Truck",
-        price: "62,000",
-        image: "car_12.jpeg",
-      },
-    ],
-  };
-  for (let i of products.data) {
-    //Create Card
-    let card = document.createElement("div");
-    //Card should have category and should stay hidden initially
-    card.classList.add("card", i.category, "hide");
-    //image div
-    let imgContainer = document.createElement("div");
-    imgContainer.classList.add("image-container");
-    //img tag
-    let image = document.createElement("img");
-    image.setAttribute("src", i.image);
-    imgContainer.appendChild(image);
-    card.appendChild(imgContainer);
-    //container
-    let container = document.createElement("div");
-    container.classList.add("container");
-    //product name
-    let name = document.createElement("h5");
-    name.classList.add("product-name");
-    name.innerText = i.productName.toUpperCase();
-    container.appendChild(name);
-    //price
-    let price = document.createElement("h6");
-    price.innerText = "$" + i.price;
-    container.appendChild(price);
-    card.appendChild(container);
-    document.getElementById("products").appendChild(card);
+        indicator[i].onclick = function () {
+          for(let x=0; x<indicator.length; x++)
+          {
+            indicator[x].classList.remove('active');
+          }
+          this.classList.add('active');
+          const displayItems = this.getAttribute('data-filter');
+
+          for(let z=0; z<li.length; z++)
+          {
+            li[z].style.transform = "scale(0)";
+            setTimeout(()=>{
+              li[z].style.display = "none";
+            }, 500);
+
+            if ((li[z].getAttribute('data-category') == displayItems) || displayItems == "all")
+             {
+               li[z].style.transform = "scale(1)";
+               setTimeout(()=>{
+                li[z].style.display = "block";
+              }, 500);
+             }
+          }
+        };
+      }
+    }
   }
-  //parameter passed from button (Parameter same as category)
-  function filterProduct(value) {
-    //Button class code
-    let buttons = document.querySelectorAll(".button-value");
-    buttons.forEach((button) => {
-      //check if value equals innerText
-      if (value.toUpperCase() == button.innerText.toUpperCase()) {
-        button.classList.add("active");
-      } else {
-        button.classList.remove("active");
+
+  function SortProduct() {
+    let select = document.getElementById('select');
+    let ar = [];
+    for(let i of li){
+      const last = i.lastElementChild;
+      const x = last.textContent.trim();
+      const y = Number(x.substring(1));
+      i.setAttribute("data-price", y);
+      ar.push(i);
+    }
+    this.run = ()=>{
+      addevent();
+    }
+    function addevent(){
+      select.onchange = sortingValue;
+    }
+    function sortingValue(){
+    
+      if (this.value === 'Default') {
+        while (field.firstChild) {field.removeChild(field.firstChild);}
+        field.append(...ar);	
       }
-    });
-    //select all cards
-    let elements = document.querySelectorAll(".card");
-    //loop through all cards
-    elements.forEach((element) => {
-      //display all cards on 'all' button click
-      if (value == "all") {
-        element.classList.remove("hide");
-      } else {
-        //Check if element contains category class
-        if (element.classList.contains(value)) {
-          //display element based on category
-          element.classList.remove("hide");
-        } else {
-          //hide other elements
-          element.classList.add("hide");
-        }
+      if (this.value === 'LowToHigh') {
+        SortElem(field, li, true)
       }
-    });
+      if (this.value === 'HighToLow') {
+        SortElem(field, li, false)
+      }
+    }
+    function SortElem(field,li, asc){
+      let  dm, sortli;
+      dm = asc ? 1 : -1;
+      sortli = li.sort((a, b)=>{
+        const ax = a.getAttribute('data-price');
+        const bx = b.getAttribute('data-price');
+        return ax > bx ? (1*dm) : (-1*dm);
+      });
+       while (field.firstChild) {field.removeChild(field.firstChild);}
+       field.append(...sortli);	
+    }
   }
-  //Search button click
-  document.getElementById("search").addEventListener("click", () => {
-    //initializations
-    let searchInput = document.getElementById("search-input").value;
-    let elements = document.querySelectorAll(".product-name");
-    let cards = document.querySelectorAll(".card");
-    //loop through all elements
-    elements.forEach((element, index) => {
-      //check if text includes the search value
-      if (element.innerText.includes(searchInput.toUpperCase())) {
-        //display matching card
-        cards[index].classList.remove("hide");
-      } else {
-        //hide others
-        cards[index].classList.add("hide");
-      }
-    });
-  });
-  //Initially display all products
-  window.onload = () => {
-    filterProduct("all");
-  };
+
+  new FilterProduct().run();
+  new SortProduct().run();
+})();

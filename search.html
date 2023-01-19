@@ -5,6 +5,8 @@
     <title>Vehicle Search</title>
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-5/fontawesome-css/all.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="icon" type="image/x-icon" href="image/Asset_1.png"> 
@@ -65,33 +67,254 @@
     </div>
 
     
-    <div class="wrapper">
-      <div id="search-container">
-        <input
-          type="search"
-          id="search-input"
-          placeholder="Search"
-        />
-        <button id="search">Search</button>
+    <main>
+      <div class="head">
+        <ul class="indicator">
+          <li data-filter="all" class="active"><a href="#">All</a></li>
+          <li data-filter="Car"><a href="#">Car</a></li>
+          <li data-filter="Truck"><a href="#">Truck</a></li>
+          <li data-filter="SUV"><a href="#">SUV</a></li>
+          <li data-filter="Jeep"><a href="#">Jeep</a></li>
+        </ul>
+        <div class="filter-condition">
+          <span>View As </span>
+          <select name="" id="select">
+            <option value="Default">Default</option>
+            <option value="LowToHigh">Low to high</option>
+            <option value="HighToLow">High to low</option>
+          </select>
+        </div>
       </div>
-      <div id="buttons">
-        <button class="button-value" onclick="filterProduct('all')">All</button>
-        <button class="button-value" onclick="filterProduct('Car')">
-          Car
-        </button>
-        <button class="button-value" onclick="filterProduct('Truck')">
-          Truck
-        </button>
-        <button class="button-value" onclick="filterProduct('SUV')">
-          SUV
-        </button>
-        <button class="button-value" onclick="filterProduct('Jeep')">
-          Jeep
-        </button>
-        
+      <div class="product-field">
+        <ul class="items">
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>Jeep</strong>
+              <span>Lorem, Ipsum Dolor Sit Amet Consectetur.</span>
+              <a href="car_page.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_1.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>Car</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_1.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_2.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>Car</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_2.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_3.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>SUV</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_3.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_4.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>Car</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_4.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_5.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>Car</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_5.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_6.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>SUV</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_6.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_7.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>SUV</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_7.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_8.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>SUV</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_8.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_9.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>Car</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_9.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_10.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>SUV</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_10.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_01.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>SUV</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_11.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_12.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>Truck</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_12.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+          <li data-category="" data-price="">
+            <picture>
+              <img src="image/car_1333.jpeg" alt="">
+            </picture>
+            <div class="detail">
+              <p class="icon">
+                 <span><i class="far fa-heart"></i></span>
+                 <span><i class="far fa-share-square"></i></span>
+                 <span><i class="fas fa-shopping-basket"></i></span>
+              </p>
+              <strong>Truck</strong>
+              <span>Lorem, ipsum dolor sit amet consectetur.</span>
+              <a href="car_page_13.html"><small>Learn More</small></a>
+            </div>
+            <h4>$62,000.00</h4>
+          </li>
+        </ul>
       </div>
-      <div id="products"></div>
-    </div>
+    </main>
+  
     <!-- Script -->
     <script src="search.js"></script>
     <script src="navbar.js"></script>
